@@ -21,8 +21,7 @@ public class CalculatorMethods
 
     public static float divide(int a, int b)
     {
-        float anwser = (float)a/ (float)b;
-        return anwser;
+        return (float)a/ (float)b;
     }
 
     public static void main(String[] args)
