@@ -7,7 +7,7 @@ public class MailMerge
         Scanner keyboard = new Scanner(System.in);
         out.println("----Thank You Letter----\n");
         String personName = "";
-        int donation = 0;
+        float donation = 0;
    
         while (!personName.equals("quit"))
         {
@@ -16,7 +16,7 @@ public class MailMerge
             personName = keyboard.next();
             if (!personName.equals("quit")) {
                 out.print("Donation amount: ");
-                donation = keyboard.nextInt();
+                donation = keyboard.nextFloat();
                 out.println(" ");
                 out.println("Dear " + personName + ",");
                 out.println("Thank you for your donation! We rely on donors like you to keep our");
