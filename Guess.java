@@ -47,6 +47,7 @@ public class Guess
         out.println("It's a number between 1-100! " + playerOne + ", you first.");
         while(keepGuessing)
         {
+            int attemptNum = 10;
             counter ++;
             guess = keyboard.nextInt();
             out.println("Guess: " + guess);
@@ -63,21 +64,21 @@ public class Guess
                 }              
             }
             //too high section
-            else if (guess > cValue && counter%2==0 && counter<=10) {
+            else if (guess > cValue && counter%2==0 && counter<=attemptNum) {
                 out.println("You have guessed a number that is too high " + playerTwo + ".\n\nNext player, can you guess it?" );
             }
-            else if (guess > cValue && counter%2!=0 && counter<=10) {
+            else if (guess > cValue && counter%2!=0 && counter<=attemptNum) {
                 out.println("You have guessed a number that is too high " + playerOne + ".\n\nNext player, can you guess it?" );
             }
             //too low section
-            else if (guess < cValue && counter%2==0 && counter<=10) {
+            else if (guess < cValue && counter%2==0 && counter<=attemptNum) {
                 out.println("You have guessed a number that is too low " + playerTwo + ".\n\nNext player, can you guess it?");
             }
-            else if (guess < cValue && counter%2!=0 && counter<=10) {
+            else if (guess < cValue && counter%2!=0 && counter<=attemptNum) {
                 out.println("You have guessed a number that is too low " + playerOne + "\n\nNext player, can you guess it?");
             }
             //both wrong section
-            else if (guess!= cValue && counter>10) {
+            else if (guess!= cValue && counter>attemptNum) {
                 keepGuessing=false;
                 out.println("Oh no " + playerTwo + " and " + playerOne + "! You have run out of guesses!! Sorry, maybe next time one of you will Guess My Number!");
             }
